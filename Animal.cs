@@ -5,28 +5,36 @@ using System.Text;
 
 namespace AnimalDb
 {
-    class Animal
+    public abstract class Animal : IAnimal
     {
-        public Animal(string food, string location, int leg)
+        public Animal( string name, string food, string location, int legs, string moves)
         {
+            _name = name;
             _food = food;
             _location = location;
-            _leg = leg;
+            _legs = legs;
+            _move = moves;
         }
 
-        public Animal()
-        {
-        }
-
+        protected string _name { get; set; }
         protected string _food { get; set; }
-        protected int _leg { get; set; }
+        protected int _legs { get; set; }
+        protected string _move { get; set; }
+
 
         protected string _location = "Australia";
 
-        public string animalDetails()
+        public virtual void PrintAnimalDetails()
         {
-            return ("Location is: " + _location + "\nCommon Food is: " + _food + "\nHave " + _leg + " legs\n" );
+            Console.WriteLine("Animals Details:>\n" +
+                "\tName: " + _name + "\n" +
+                "\tLocation is: " + _location +
+                "\n\tCommon Food is: " + _food + 
+                "\n\tHave " + _legs + " legs\n");
         }
+
+        public abstract void PrintMovingType();
+
 
     }
 }
