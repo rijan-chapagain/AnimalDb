@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AnimalDb
+﻿namespace AnimalDb
 {
+    /// <summary>
+    /// Defines the <see cref="IAnimal" />.
+    /// </summary>
     public interface IAnimal
     {
+        /// <summary>
+        /// The PrintAnimalDetails.
+        /// </summary>
         void PrintAnimalDetails();
     }
 }
+

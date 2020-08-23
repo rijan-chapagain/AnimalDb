@@ -1,14 +1,19 @@
-﻿using System;
-
-namespace AnimalDb
+﻿namespace AnimalDb
 {
-    class Program
+    /// <summary>
+    /// Defines the <see cref="Program" />.
+    /// </summary>
+    internal class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The Main.
+        /// </summary>
+        /// <param name="args">The args<see cref="string[]"/>.</param>
+        internal static void Main(string[] args)
         {
             Animal k = new Kangaroo("", "meat", "Perth", 4, "");
             Animal child = new Kangaroo("", "meat", "Nepal", 4, "");
-            Animal e = new Emu("","vageterian", "South Australia", 2, "");
+            Animal e = new Emu("", "vageterian", "South Australia", 2, "");
 
             // Displays moving types from derived classes
             k.PrintMovingType();
@@ -19,7 +24,6 @@ namespace AnimalDb
             k.PrintAnimalDetails();
             child.PrintAnimalDetails();
             e.PrintAnimalDetails();
-
         }
     }
 }
