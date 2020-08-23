@@ -9,6 +9,8 @@
         /// The PrintAnimalDetails.
         /// </summary>
         void PrintAnimalDetails();
+        //void WriteLineToFile();
+
     }
 }
 
