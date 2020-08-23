@@ -6,13 +6,20 @@ namespace AnimalDb
     {
         static void Main(string[] args)
         {
-            Kangaroo a = new Kangaroo("meat", "Perth", 4);
-            Kangaroo child = new Kangaroo("meat", "Nepal", 4);
-            Emu e = new Emu("vagetirian", "South Australia", 2);
+            Animal k = new Kangaroo("", "meat", "Perth", 4, "");
+            Animal child = new Kangaroo("", "meat", "Nepal", 4, "");
+            Animal e = new Emu("","vageterian", "South Australia", 2, "");
 
-            Console.WriteLine(a.animalDetails());
-            Console.WriteLine(child.animalDetails());
-            Console.WriteLine(e.animalDetails());
+            // Displays moving types from derived classes
+            k.PrintMovingType();
+            child.PrintMovingType();
+            e.PrintMovingType();
+
+            // display Animals details from abstract class
+            k.PrintAnimalDetails();
+            child.PrintAnimalDetails();
+            e.PrintAnimalDetails();
+
         }
     }
 }
