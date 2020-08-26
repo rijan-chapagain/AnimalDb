@@ -10,8 +10,6 @@
             _name = "Kangaroo";
         }
 
-        public int MyProperty { get; set; }
-
         public override void PrintMovingType()
         {
             Console.WriteLine("Moving medium of Kangaroo is: " + _move);
